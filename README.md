@@ -226,7 +226,10 @@ The dashboard includes:
 - Last sensor reading timestamp.
 - Automatic and manual data refresh.
 
-*Add your dashboard screenshots here when documenting the final interface.*
+<img width="1914" height="720" alt="image" src="https://github.com/user-attachments/assets/22a2dd07-64bf-4d23-a379-0e1a9db2eb4e" />
+<img width="1638" height="486" alt="image" src="https://github.com/user-attachments/assets/271a5c0b-4949-47e7-bb89-71c7212ab73d" />
+
+
 
 ## 📈 Data Analytics
 
