@@ -13,13 +13,7 @@ from analytics.analysis import analyze_sensor_data
 from services.thingspeak import get_channel_data
 
 app = FastAPI(title="ThingSpeak IoT Dashboard API")
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:63342"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+
 
 
 

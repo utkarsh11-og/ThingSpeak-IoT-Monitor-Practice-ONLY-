@@ -6,12 +6,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables
 ENV_PATH = BASE_DIR / ".env"
-config = dotenv_values(ENV_PATH)
 
 if not ENV_PATH.exists():
     raise FileNotFoundError(
         f".env file not found at: {ENV_PATH}"
     )
+
+config = dotenv_values(ENV_PATH)
 
 
 
