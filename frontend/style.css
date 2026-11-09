@@ -1,0 +1,328 @@
+/* ===== Global Settings ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b1120;
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+
+/* ===== Dashboard Layout ===== */
+
+.dashboard {
+    max-width: 1400px;
+    margin: auto;
+    padding: 35px;
+}
+
+
+/* ===== Header ===== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.header p {
+    color: #94a3b8;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+
+/* ===== Connection Status ===== */
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #172033;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #22c55e;
+}
+
+
+/* ===== Sensor Cards ===== */
+
+.sensor-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #151e30;
+    padding: 28px;
+    border: 1px solid #263449;
+    border-radius: 16px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.card h3 {
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sensor-value {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 22px;
+    color: #ffffff;
+}
+
+.unit {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+.sensor-description {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+
+/* ===== Charts ===== */
+
+.charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/*.chart-card {*/
+/*    background: #151e30;*/
+/*    border: 1px solid #263449;*/
+/*    border-radius: 16px;*/
+/*    padding: 25px;*/
+/*    min-height: 350px;*/
+/*}*/
+
+.chart-card {
+    background: #151e30;
+    border: 1px solid #263449;
+    border-radius: 16px;
+    padding: 25px;
+    height: 350px;
+}
+
+
+.chart-card h3 {
+    color: #e2e8f0;
+    margin-bottom: 25px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+
+/* ===== Footer ===== */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 35px;
+    padding: 20px 0;
+    border-top: 1px solid #263449;
+}
+
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 768px) {
+
+    .dashboard {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .sensor-cards,
+    .charts {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+/* ===== Analytics Section ===== */
+
+.analytics-section {
+    margin-bottom: 30px;
+}
+
+.analytics-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.analytics-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.analytics-card {
+    background: #151e30;
+    border: 1px solid #263449;
+    border-radius: 14px;
+    padding: 22px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.analytics-card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.analytics-card h3 {
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.analytics-card p {
+    font-size: 27px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 768px) {
+    .analytics-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .analytics-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== Header Actions ===== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ===== Refresh Button ===== */
+
+.refresh-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.refresh-button:hover {
+    background: #1d4ed8;
+}
+
+.refresh-button:disabled {
+    background: #475569;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .header-actions {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ===== Connection Status ===== */
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #172033;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #eab308;
+}
+
+/* Connected */
+
+.connection.connected .status-dot {
+    background: #22c55e;
+    box-shadow: 0 0 10px #22c55e;
+}
+
+/* Updating */
+
+.connection.updating .status-dot {
+    background: #eab308;
+    box-shadow: 0 0 10px #eab308;
+}
+
+/* Disconnected */
+
+.connection.disconnected .status-dot {
+    background: #ef4444;
+    box-shadow: 0 0 10px #ef4444;
+}
+
+

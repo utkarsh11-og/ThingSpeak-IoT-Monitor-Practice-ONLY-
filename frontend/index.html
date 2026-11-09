@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IoT Environmental Monitoring</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>IoT Environmental Monitor</h1>
+                <p>Real-Time Sensor Analytics Dashboard</p>
+            </div>
+
+            <div class="header-actions">
+
+                <button id="refreshButton" class="refresh-button">
+                    ↻ Refresh Data
+                </button>
+
+                <div class="connection" id="connectionIndicator">
+                    <span class="status-dot"></span>
+                    <span id="connectionStatus">Connecting...</span>
+                </div>
+
+    </div>
+        </header>
+
+        <!-- Sensor Cards -->
+        <section class="sensor-cards">
+
+            <div class="card temperature-card">
+                <h3>Temperature</h3>
+                <p class="sensor-value">
+                    <span id="temperature">--</span>
+                    <span class="unit">°C</span>
+                </p>
+                <p class="sensor-description">Current temperature</p>
+            </div>
+
+            <div class="card humidity-card">
+                <h3>Humidity</h3>
+                <p class="sensor-value">
+                    <span id="humidity">--</span>
+                    <span class="unit">%</span>
+                </p>
+                <p class="sensor-description">Current humidity level</p>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- Analytics Section -->
+<section class="analytics-section">
+
+    <h2>Sensor Analytics</h2>
+
+    <div class="analytics-cards">
+
+        <div class="analytics-card">
+            <h3>Average Temperature</h3>
+            <p id="avgTemperature">-- °C</p>
+        </div>
+
+        <div class="analytics-card">
+            <h3>Maximum Temperature</h3>
+            <p id="maxTemperature">-- °C</p>
+        </div>
+
+        <div class="analytics-card">
+            <h3>Minimum Temperature</h3>
+            <p id="minTemperature">-- °C</p>
+        </div>
+
+        <div class="analytics-card">
+            <h3>Average Humidity</h3>
+            <p id="avgHumidity">-- %</p>
+        </div>
+
+        <div class="analytics-card">
+            <h3>Maximum Humidity</h3>
+            <p id="maxHumidity">-- %</p>
+        </div>
+
+        <div class="analytics-card">
+            <h3>Minimum Humidity</h3>
+            <p id="minHumidity">-- %</p>
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- Charts -->
+        <section class="charts">
+
+            <div class="chart-card">
+                <h3>Temperature History</h3>
+                <canvas id="temperatureChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Humidity History</h3>
+                <canvas id="humidityChart"></canvas>
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+    Last Successful Sensor Reading:
+    <span id="lastUpdated">Waiting for data...</span>
+</p>
+            <p>Powered by ThingSpeak + FastAPI</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
